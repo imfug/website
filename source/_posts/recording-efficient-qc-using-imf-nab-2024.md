@@ -8,4 +8,5 @@ tags:
 ---
 
 <iframe src="https://www.youtube.com/embed/sjXR0DSImKs" width="560" height="315" frameborder="0" allowfullscreen=""></iframe>
-<p>Preserving QC information through the supply chain using the Interoperable Master Format (IMF) improves automation and reduces costly rejections and repeated QC! Fereidoon Khosravi, Laurence Stoll, Raymond Yeung, Andrew Dunne and Pierre-Anthony Lemieux walk us through the state of the art.</p>
+
+Preserving QC information through the supply chain using the Interoperable Master Format (IMF) improves automation and reduces costly rejections and repeated QC! Fereidoon Khosravi, Laurence Stoll, Raymond Yeung, Andrew Dunne and Pierre-Anthony Lemieux walk us through the state of the art.

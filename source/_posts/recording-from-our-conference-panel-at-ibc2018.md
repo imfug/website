@@ -8,4 +8,5 @@ tags:
 ---
 
 <iframe src="https://www.youtube.com/embed/XuJItryj3SQ" width="560" height="315" frameborder="0" allowfullscreen=""></iframe>
-<p><a href="/deploying-component-based-workflows-experiences-from-the-front-line/">https://www.imfug.com/deploying-component-based-workflows-experiences-from-the-front-line/</a></p>
+
+[https://www.imfug.com/deploying-component-based-workflows-experiences-from-the-front-line/](/deploying-component-based-workflows-experiences-from-the-front-line/)

@@ -18,8 +18,24 @@
         <a class="site-title d-block fs-2 fw-bold text-body text-decoration-none" href="<%- url_for('/') %>"><%= config.title %></a>
         <% if (config.tagline) { %><p class="small text-body-secondary mt-1 mb-3"><%= config.tagline %></p><% } %>
         <nav class="nav flex-row flex-md-column flex-wrap nav-pills gap-1">
-          <% Object.keys(config.menu || {}).forEach(function(k){ %>
-            <a class="nav-link py-1<%- is_current(config.menu[k]) ? ' active' : '' %>" href="<%- url_for(config.menu[k]) %>"<%- is_current(config.menu[k]) ? ' aria-current="page"' : '' %>><%= k %></a>
+          <%
+            var isCurrent = function(u){ return typeof u === 'string' && u.charAt(0) === '/' && is_current(u); };
+            var link = function(label, u, extra){
+              var cur = isCurrent(u);
+              return '<a class="nav-link py-1' + (cur ? ' active' : '') + (extra || '') + '" href="' + url_for(u) + '"' + (cur ? ' aria-current="page"' : '') + '>' + label + '</a>';
+            };
+          %>
+          <% Object.keys(config.menu || {}).forEach(function(k){ var v = config.menu[k]; %>
+            <% if (typeof v === 'string') { %>
+              <%- link(k, v) %>
+            <% } else { var kids = Object.keys(v); %>
+              <details class="nav-item" open>
+                <summary class="nav-link py-1 text-primary" role="button"><%= k %> <span class="small">▾</span></summary>
+                <div class="nav flex-column nav-pills ms-3 gap-1">
+                  <% kids.forEach(function(c){ %><%- link(c, v[c]) %><% }) %>
+                </div>
+              </details>
+            <% } %>
           <% }) %>
         </nav>
       </aside>

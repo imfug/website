@@ -7,5 +7,6 @@ tags:
   - event
 ---
 
-<p>Lance Maurer (<a href="https://cinnafilm.com">Cinnafilm</a>) and John Hurst (<a href="https://cinecert.com">CineCert</a>) tell us about their recent collaboration that combines Cinnafilm's Pixel Strings and CineCert's Anini into a cloud-based IMF processing engine.</p>
+Lance Maurer ([Cinnafilm](https://cinnafilm.com)) and John Hurst ([CineCert](https://cinecert.com)) tell us about their recent collaboration that combines Cinnafilm's Pixel Strings and CineCert's Anini into a cloud-based IMF processing engine.
+
 <iframe src="https://www.youtube.com/embed/lYGaN69oIXQ" width="560" height="315" frameborder="0" allowfullscreen=""></iframe>

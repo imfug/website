@@ -30,15 +30,26 @@ feed:
   path: atom.xml
   limit: 20
 
+# A value that is a mapping becomes an expandable group of sub-items (open by default)
 menu:
   About: /about/
-  Products: /suppliers/
-  Open Source: /open-source/
+  What is IMF?: /explainer/
   Meetings: /meetings/
   Events: /events/
   Best Practices: /best-practices/
   Plugfests: /plugfest/
+  Resources:
+    Videos: https://www.youtube.com/channel/UCp8--tI6mXF1pGjinlkMvyw
+    Open Source: /open-source/
+    Products and Services: /suppliers/
+    Other Organizations: /other-organizations/
+    Logo: /logo/
+    Members area: https://groups.imfug.com/g/members
   Join: /join/
 
 # set to false to drop themes/minimal/source/css/style.css and see plain Bootstrap
 custom_css: true
+
+# lowercase heading ids, so links like #program resolve
+marked:
+  modifyAnchors: 1
