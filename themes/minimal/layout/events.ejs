@@ -1,0 +1,15 @@
+<%
+  var tag = site.tags.findOne({ name: 'event' });
+  var events = tag ? tag.posts.sort('-date') : [];
+%>
+<article>
+  <h1><%= page.title %></h1>
+  <ul class="list-unstyled mt-3">
+  <% events.each(function(post){ %>
+    <li class="mb-2">
+      <time class="small text-body-secondary d-block" datetime="<%= date_xml(post.date) %>"><%= date(post.date, 'MMMM D, YYYY') %></time>
+      <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+    </li>
+  <% }) %>
+  </ul>
+</article>

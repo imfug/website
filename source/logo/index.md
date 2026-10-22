@@ -1,0 +1,18 @@
+---
+title: Logo
+date: '2018-03-16 16:13:32'
+layout: page
+permalink: logo/
+---
+
+<h2>#ispeakimf</h2>
+<p>Display this logo when you, your services or products speak IMF.</p>
+<figure><a href="/assets/2018/07/IMF_Logo_Hashtag_MediumRes.png"><img src="/assets/2018/07/IMF_Logo_Hashtag_MediumRes.png" alt=""></a></figure>
+<p>Right-click to save. Use of this logo does not imply conformance to IMF standards. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nd/4.0/" rel="license">Creative Commons Attribution-NoDerivatives 4.0 International License</a>. <img style="border-width: 0;" src="https://i.creativecommons.org/l/by-nd/4.0/80x15.png" alt="Creative Commons License"></p>
+<figure><table><tbody><tr><th><img src="/assets/2018/07/IMF_Logo_Hashtag_LowRes-1.png" alt="" width="500" height="231"></th><td><a href="/assets/2018/07/IMF_Logo_Hashtag_LowRes.png">Small</a></td><td><a href="/assets/2018/07/IMF_Logo_Hashtag_MediumRes.png">Medium</a></td><td><a href="/assets/2018/07/IMF_Logo_Hashtag_HighRes-1.png">Large</a></td><td><a href="https://drive.google.com/file/d/1URzUXXIXeKPEquobC1CJH19xx5WEJ3YK/view?usp=sharing">EPS RGB</a></td><td><a href="https://drive.google.com/file/d/1Uj_vn2ywZgYxn_Z7aUjZuzBnsoDQYE3H/view?usp=drive_link">EPS CMYK</a></td></tr><tr><th><img src="/assets/2018/07/IMF_Logo_Hashtag_Black_LowRes.png" alt="" width="500" height="231"></th><td><a href="https://www.sandflow.com/public/imfug/logo/IMF/PNG/Low%20Resolution/Hashtag/IMF_Logo_Hashtag_Black_LowRes.png">Small</a></td><td><a href="https://www.sandflow.com/public/imfug/logo/IMF/PNG/Medium%20Resolution/Hashtag/IMF_Logo_Hashtag_Black_MediumRes.png">Medium</a></td><td><a href="https://www.sandflow.com/public/imfug/logo/IMF/PNG/High%20Resolution/Hashtag/IMF_Logo_Hashtag_Black_HighRes.png">Large</a></td><td><a href="https://drive.google.com/file/d/1JQVtPzDyuj-pigtU_yXsCQEr-VOyj9o4/view?usp=drive_link">EPS RGB</a></td><td><a href="https://drive.google.com/file/d/1gI5xalvv5J0Az2pc3evtJxGeiOezSOab/view?usp=drive_link">EPS CMYK</a></td></tr><tr><th><img src="/assets/2019/02/IMF_Logo_LowRes.png" alt="" width="500" height="181"></th><td><a href="/assets/2019/02/IMF_Logo_LowRes.png">Small</a></td><td><a href="/assets/2019/02/IMF_Logo_MediumRes.png">Medium</a></td><td><a href="/assets/2019/02/IMF_Logo_RGB_HighRes.png">Large</a></td><td><a href="https://drive.google.com/file/d/1fKZMzNMSQ2QOCGpbYQYcusgk6BqV5OWe/view?usp=drive_link">EPS RGB</a></td><td><a href="https://drive.google.com/file/d/18kdU-vxSlbrBEnsaR7HawWWmUxicHq_H/view?usp=drive_link">EPS CMYK</a></td></tr><tr><th><img src="/assets/2019/09/IMF_Logo_White_LowRes-300x131.png" alt="" width="300" height="131"></th><td><a href="/assets/2019/09/IMF_Logo_White_LowRes.png">Small</a></td><td><a href="/assets/2019/09/IMF_Logo_White_MediumRes.png">Medium</a></td><td><a href="/assets/2019/09/IMF_Logo_White_HighRes.png">Large</a></td><td><a href="https://drive.google.com/file/d/11pAsFF9cVELW00peKdCnvWC-yGQ93byI/view?usp=drive_link">EPS RGB</a></td><td><a href="https://drive.google.com/file/d/1OnfgEBgizoC16ImCmCBRLrxH9ghuLHeL/view?usp=drive_link">EPS CMYK</a></td></tr></tbody></table></figure>
+<p>Other treatments are available on <a href="mailto:info@imfug.com">request</a>.</p>
+<h2>User Group</h2>
+<p>Use this logo when referring to the user group (right-click to save).</p>
+<figure><img src="/assets/2024/04/mark-150x150.png" alt=""><figcaption>IMF User Group Icon</figcaption></figure>
+<figure><img src="/assets/2024/04/logo-1024x197.png" alt=""><figcaption>IMF User Group Logo</figcaption></figure>
+<figure><img src="/assets/2024/04/logo_SMPTE-1024x236.jpg" alt="" width="690" height="159"><figcaption>IMF User Group, a SMPTE community, Logo</figcaption></figure>

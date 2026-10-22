@@ -1,0 +1,35 @@
+{
+  "name": "imfug-site",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "hexo generate",
+    "server": "hexo server",
+    "clean": "hexo clean",
+    "convert": "node tools/wxr2hexo.mjs build/imfug.WordPress.2026-10-21.xml build/uploads/uploads source",
+    "check-links": "node tools/check-links.mjs"
+  },
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "hexo": "^8.1.2",
+    "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-category": "^2.0.0",
+    "hexo-generator-feed": "^4.0.0",
+    "hexo-generator-index": "^4.0.0",
+    "hexo-generator-tag": "^2.0.0",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-marked": "^7.0.1",
+    "hexo-server": "^3.0.0"
+  },
+  "devDependencies": {
+    "cheerio": "^1.2.0",
+    "fast-xml-parser": "^5.11.2",
+    "js-yaml": "^4.3.2",
+    "turndown": "^7.2.4",
+    "turndown-plugin-gfm": "^1.0.2"
+  },
+  "private": true,
+  "hexo": {
+    "version": "8.1.2"
+  }
+}

@@ -1,0 +1,6 @@
+/* Image sizing; everything else comes from Bootstrap */
+.sidebar .brand img { display: block; width: 10rem; height: auto; }
+.content td img { max-width: none; }
+@media (max-width: 767.98px) {
+  .sidebar .brand img { width: 8rem; }
+}

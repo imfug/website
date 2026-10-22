@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="<%= config.language %>">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= page.title ? page.title + ' · ' : '' %><%= config.title %></title>
+  <meta name="description" content="<%= config.description %>">
+  <link rel="alternate" type="application/atom+xml" href="<%- url_for('atom.xml') %>">
+  <script>document.documentElement.dataset.bsTheme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';</script>
+  <%- css('css/bootstrap.min.css') %>
+  <% if (config.custom_css !== false) { %><%- css('css/style.css') %><% } %>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <aside class="sidebar col-md-3 col-xl-2 py-3 px-3 border-end">
+        <a class="brand d-block mb-2" href="<%- url_for('/') %>"><img src="<%- url_for('images/logo.png') %>" alt="<%= config.title %>"></a>
+        <a class="site-title d-block fs-2 fw-bold text-body text-decoration-none" href="<%- url_for('/') %>"><%= config.title %></a>
+        <% if (config.tagline) { %><p class="small text-body-secondary mt-1 mb-3"><%= config.tagline %></p><% } %>
+        <nav class="nav flex-row flex-md-column flex-wrap nav-pills gap-1">
+          <% Object.keys(config.menu || {}).forEach(function(k){ %>
+            <a class="nav-link py-1<%- is_current(config.menu[k]) ? ' active' : '' %>" href="<%- url_for(config.menu[k]) %>"<%- is_current(config.menu[k]) ? ' aria-current="page"' : '' %>><%= k %></a>
+          <% }) %>
+        </nav>
+      </aside>
+      <div class="col-md-9 col-xl-10 px-md-4">
+        <main class="content-wrap py-4"><%- body %></main>
+        <footer class="small text-body-secondary border-top py-3">
+          <%= config.description %> · <a href="<%- url_for('atom.xml') %>">Feed</a>
+        </footer>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
