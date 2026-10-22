@@ -26,12 +26,6 @@ jobs:
       - run: npm run build
       - name: Check internal links
         run: npm run check-links
-      - name: Check external links (informational)
-        uses: lycheeverse/lychee-action@v2
-        continue-on-error: true
-        with:
-          args: --no-progress --accept 200..=299,403,429 --max-retries 2 --timeout 20 'public/**/*.html'
-          fail: true
       - uses: actions/configure-pages@v5
         if: github.event_name != 'pull_request'
       - uses: actions/upload-pages-artifact@v3

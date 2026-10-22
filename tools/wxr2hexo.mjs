@@ -22,7 +22,8 @@ const rows = items.filter(
 );
 const pathOf = (i) => new URL(i.link).pathname;
 const known = new Set(rows.map(pathOf));
-// private pages (members area, meeting notes) have no static equivalent: links to them become plain text
+// private pages (members area, meeting notes) have no static equivalent: links to them go to the members area
+const MEMBERS_URL = 'https://groups.imfug.com/g/members';
 const privSlugs = new Set(
   items.filter((i) => ['post', 'page'].includes(i['wp:post_type']) && i['wp:status'] === 'private')
     .map((i) => i['wp:post_name']),
@@ -88,7 +89,7 @@ function cleanHtml(html) {
     .replace(/^[ \t]*(https?:\/\/[^\s<]+(?:[ \t]+https?:\/\/[^\s<]+)*)[ \t]*$/gm, '<p>$1</p>')
     .replace(/\[table id=(\d+) \/\]/g, (m, id) => (tables.has(id) ? renderTable(tables.get(id)) : m))
     .replace(/\[insert page=['"]([^'"]+)['"][^\]]*\]/g, (m, page) => insertLink(page) || m)
-    .replace(/\[(?:lastupdated|insert|table|simpletoc)[^\]]*\]/g, '');
+    .replace(/\[(?:lastupdated|insert|table|simpletoc|s3browse)[^\]]*\]/g, '');
   const $ = cheerio.load(html, null, false);
   $('form, script, style, .wp-block-mailchimp-for-wp-form').remove();
   // definition lists become headings (dt) followed by content (dd)
@@ -125,7 +126,7 @@ function cleanHtml(html) {
     const u = $(el).attr('href');
     if (HOSTS.test(u) || u.startsWith('/')) {
       const p = new URL(u, 'https://www.imfug.com').pathname.replace(/\/+$/, '') + '/';
-      if (!known.has(p) && privSlugs.has(p.split('/').filter(Boolean).pop())) $(el).replaceWith($(el).contents());
+      if (!known.has(p) && privSlugs.has(p.split('/').filter(Boolean).pop())) $(el).attr('href', MEMBERS_URL);
     }
   });
   // inline styles are presentational only (and image widths fight img-fluid)

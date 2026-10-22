@@ -7,6 +7,6 @@ permalink: meetings/
 
 IMF UG meetings are open to members only. Please [join](/join/) today.
 
-Please consult our calendar for upcoming meetings.
+Please consult our [calendar](https://groups.imfug.com/g/members/calendar) for upcoming meetings.
 
-Meeting information, including meeting notes, is available in the members area.
+Meeting information, including meeting notes, is available in the [members area](https://groups.imfug.com/g/members/files/Meetings).

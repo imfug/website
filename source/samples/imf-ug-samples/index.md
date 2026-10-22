@@ -5,4 +5,4 @@ layout: page
 permalink: samples/imf-ug-samples/
 ---
 
-IMF UG members can upload samples and perform bulk downloads. \[s3browse bucket=imfug\]
+IMF UG members have acccess to smaple content from previous plugfests.
