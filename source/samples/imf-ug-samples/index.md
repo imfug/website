@@ -5,4 +5,4 @@ layout: page
 permalink: samples/imf-ug-samples/
 ---
 
-IMF UG members have acccess to smaple content from previous plugfests.
+IMF UG members can access sample content from previous plugfests.
