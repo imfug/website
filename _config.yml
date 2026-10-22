@@ -6,7 +6,8 @@ tagline: A SMPTE community for users and implementers of the Interoperable Maste
 language: en
 timezone: America/Los_Angeles
 
-url: https://www.imfug.com
+url: https://imfug.github.io/website
+root: /website/
 permalink: :title/
 pretty_urls:
   trailing_index: false
@@ -39,7 +40,7 @@ menu:
   Best Practices: /best-practices/
   Plugfests: /plugfest/
   Resources:
-    Videos: https://www.youtube.com/channel/UCp8--tI6mXF1pGjinlkMvyw
+    Videos: https://www.youtube.com/@IMFUserGroup
     Open Source: /open-source/
     Products and Services: /suppliers/
     Other Organizations: /other-organizations/

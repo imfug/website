@@ -3,9 +3,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import * as cheerio from 'cheerio';
+import yaml from 'js-yaml';
 
 const root = 'public';
 const SITE = new URL('https://www.imfug.com/');
+// the site may be served from a subpath (e.g. /website/ on GitHub Pages): take it from the Hexo config
+const SITE_ROOT = yaml.load(fs.readFileSync('_config.yml', 'utf8')).root || '/';
 const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) =>
   e.isDirectory() ? walk(path.join(d, e.name)) : [path.join(d, e.name)]);
 const pages = walk(root).filter((f) => f.endsWith('.html'));
@@ -17,7 +20,7 @@ const load = (f) => {
 
 const bad = new Set();
 for (const f of pages) {
-  const here = new URL('/' + path.relative(root, f).replace(/index\.html$/, ''), SITE);
+  const here = new URL(SITE_ROOT + path.relative(root, f).replace(/index\.html$/, ''), SITE);
   const $ = load(f);
   $('a[href], img[src], iframe[src], object[data], link[href], script[src]').each((_, el) => {
     const raw = ($(el).attr('href') ?? $(el).attr('src') ?? $(el).attr('data')).trim();
@@ -25,7 +28,8 @@ for (const f of pages) {
     let u;
     try { u = new URL(raw, here); } catch { bad.add(`${raw}  (invalid)  <- ${path.relative(root, f)}`); return; }
     if (u.host !== SITE.host && u.host !== 'imfug.com') return;
-    const p = decodeURIComponent(u.pathname);
+    if (!u.pathname.startsWith(SITE_ROOT)) { bad.add(`${u.pathname}  (outside ${SITE_ROOT})  <- ${path.relative(root, f)}`); return; }
+    const p = decodeURIComponent(u.pathname.slice(SITE_ROOT.length - 1));
     let t = path.join(root, p);
     if (fs.existsSync(t) && fs.statSync(t).isDirectory()) t = path.join(t, 'index.html');
     if (!fs.existsSync(t)) { bad.add(`${u.pathname}  <- ${path.relative(root, f)}`); return; }

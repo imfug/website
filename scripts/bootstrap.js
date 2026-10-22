@@ -33,5 +33,12 @@ hexo.extend.filter.register('after_post_render', (data) => {
     .replace(/<img(?![^>]*class=)/g, '<img class="img-fluid"')
     .replace(/<li(?=[\s>])(?![^>]*class=)/g, '<li class="mt-3"')
     .replace(/<blockquote(?=[\s>])/g, '<blockquote class="blockquote border-start ps-3 text-body-secondary"');
+  // Markdown links and images get the site root from the renderer; raw HTML (tables, iframes, <a>) doesn't,
+  // so add it where it's missing when the root isn't /
+  const root = hexo.config.root || '/';
+  if (root !== '/') {
+    data.content = data.content.replace(/(\s(?:href|src|data)=")\/(?!\/)([^"]*)/g, (m, attr, rest) =>
+      `${attr}${(`/${rest}`).startsWith(root) ? '/' : root}${rest}`);
+  }
   return data;
 });

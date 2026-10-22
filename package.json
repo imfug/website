@@ -7,7 +7,7 @@
     "clean": "hexo clean",
     "convert": "node tools/wxr2hexo.mjs build/imfug.WordPress.2026-10-21.xml build/uploads/uploads source",
     "check-links": "node tools/check-links.mjs",
-    "check-urls": "linkinator ./public --config linkinator.config.json"
+    "check-urls": "node tools/check-urls.mjs"
   },
   "description": "",
   "dependencies": {
