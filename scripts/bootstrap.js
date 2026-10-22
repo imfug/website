@@ -10,10 +10,23 @@ hexo.extend.generator.register('bootstrap', () => [
   },
 ]);
 
+// The Logo page shows logos as thumbnails: previews in the table, larger logos at a quarter width
+// (the 150px icon is already thumbnail-sized)
+const logoThumbnails = (html) =>
+  html.split(/(<table[\s\S]*?<\/table>)/).map((part, i) => {
+    const inTable = i % 2 === 1;
+    return part.replace(/<img(?![^>]*class=)([^>]*?)src="([^"]*)"/g, (m, attrs, src) => {
+      if (/creativecommons\.org/.test(src)) return m; // license badge: leave at its own size
+      const wide = !inTable && !/-150x150\./.test(src);
+      return `<img class="img-thumbnail${wide ? ' w-25' : ''}"${attrs}src="${src}"`;
+    });
+  }).join('');
+
 hexo.extend.filter.register('after_post_render', (data) => {
+  if (data.source === 'logo/index.md') data.content = logoThumbnails(data.content);
   data.content = data.content
     .replace(/<thead>\s*<tr>(\s*<th[^>]*><\/th>)+\s*<\/tr>\s*<\/thead>\s*/g, '') // empty header rows from Markdown tables
-    .replace(/<table(?=[\s>])/g, '<div class="table-responsive"><table class="table table-bordered table-sm align-top"')
+    .replace(/<table(?=[\s>])/g, '<div class="table-responsive"><table class="table table-hover table-sm align-top"')
     .replace(/<\/table>/g, '</table></div>')
     // cells holding an image get a bounded width (the image itself scales with img-fluid)
     .replace(/<(td|th)(?![^>]*class=)([^>]*)>(?=\s*(?:<a[^>]*>\s*)?<img)/g, '<$1 class="w-25"$2>')

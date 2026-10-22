@@ -2,7 +2,7 @@
   "name": "imfug-site",
   "version": "1.0.0",
   "scripts": {
-    "build": "hexo generate",
+    "build": "hexo clean && hexo generate",
     "server": "hexo server",
     "clean": "hexo clean",
     "convert": "node tools/wxr2hexo.mjs build/imfug.WordPress.2026-10-21.xml build/uploads/uploads source",

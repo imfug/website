@@ -1,4 +1,5 @@
-/* Image sizing; everything else comes from Bootstrap */
+/* Page width limit and image sizing; everything else comes from Bootstrap */
+.custom-limit { max-width: 64rem; }
 .sidebar .brand img { display: block; width: 10rem; height: auto; }
 @media (max-width: 767.98px) {
   .sidebar .brand img { width: 8rem; }
