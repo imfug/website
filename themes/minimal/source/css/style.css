@@ -4,3 +4,12 @@
 @media (max-width: 767.98px) {
   .sidebar .brand img { width: 8rem; }
 }
+
+/* Pagefind search follows Bootstrap's light/dark theme */
+.pagefind-ui {
+  --pagefind-ui-primary: var(--bs-primary);
+  --pagefind-ui-text: var(--bs-body-color);
+  --pagefind-ui-background: var(--bs-body-bg);
+  --pagefind-ui-border: var(--bs-border-color);
+  --pagefind-ui-tag: var(--bs-tertiary-bg);
+}
