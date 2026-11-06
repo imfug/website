@@ -1,7 +1,7 @@
 <h1>Archive</h1>
-<ul class="list-unstyled">
+<ul class="post-list">
 <% page.posts.each(function(post){ %>
-  <li><time class="small text-body-secondary me-2"><%= date(post.date, 'YYYY-MM-DD') %></time><a href="<%- url_for(post.path) %>"><%= post.title %></a></li>
+  <li><time class="meta"><%= date(post.date, 'YYYY-MM-DD') %></time><a href="<%- url_for(post.path) %>"><%= post.title %></a></li>
 <% }) %>
 </ul>
 <%- paginator() %>

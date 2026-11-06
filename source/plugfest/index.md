@@ -7,16 +7,16 @@ permalink: plugfest/
 
 ## What?
 
-> G**athering of IMF users and implementers where content is created, exchanged, and consumed**.
+> Gathering of IMF users and implementers where content is created, exchanged, and consumed.
 
 Plugfests are typically in-person, with remote participation through instant messaging, videoconferencing and shared storage.
 
 ## Why?
 
--   Gain practical experience with IMF
--   Network with members of the community
--   Exercise new features
--   Identify issues with implementations, practices and specifications
+* Gain practical experience with IMF
+* Network with members of the community
+* Exercise new features
+* Identify issues with implementations, practices and specifications
 
 ## How?
 

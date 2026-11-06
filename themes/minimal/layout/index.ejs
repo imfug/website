@@ -1,11 +1,11 @@
 <% page.posts.each(function(post){ %>
-  <article class="card post-card mb-4 shadow-sm">
-    <div class="card-header bg-body-tertiary">
-      <time class="small text-body-secondary" datetime="<%= date_xml(post.date) %>"><%= date(post.date, 'MMMM D, YYYY') %></time>
-      <h2 class="post-title fw-semibold mb-0 mt-1"><a class="text-body text-decoration-none" href="<%- url_for(post.path) %>"><%= post.title %></a></h2>
-    </div>
-    <% if (post.banner) { %><a href="<%- url_for(post.path) %>"><img class="card-img-top rounded-0" src="<%- url_for(post.banner) %>" alt=""></a><% } %>
-    <div class="card-body content"><%- post.content %></div>
+  <article class="post-card">
+    <header>
+      <time class="meta" datetime="<%= date_xml(post.date) %>"><%= date(post.date, 'MMMM D, YYYY') %></time>
+      <h2 class="post-title"><a href="<%- url_for(post.path) %>"><%= post.title %></a></h2>
+    </header>
+    <% if (post.banner) { %><a href="<%- url_for(post.path) %>"><img class="banner" src="<%- url_for(post.banner) %>" alt=""></a><% } %>
+    <div class="content"><%- post.content %></div>
   </article>
 <% }) %>
 <%- paginator({ prev_text: '← Newer', next_text: 'Older →' }) %>

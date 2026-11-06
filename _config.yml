@@ -48,8 +48,6 @@ menu:
     Members area: https://groups.imfug.com/g/members
   Join: /join/
 
-# set to false to drop themes/minimal/source/css/style.css and see plain Bootstrap
-custom_css: true
 
 # lowercase heading ids, so links like #program resolve
 marked:
