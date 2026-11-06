@@ -23,6 +23,19 @@ prismjs:
   enable: false
 
 per_page: 10
+# PDFs under source/assets/ are published at /wp-content/uploads/ instead (scripts/legacy-urls.js)
+exclude:
+  - assets/**/*.pdf
+
+# category pages keep the WordPress addresses (/category/<slug>/)
+category_dir: category
+category_map:
+  Announcement: announcement
+  Events: events
+  FAQ: faq
+  Information: information
+  Meetings: meetings
+  Report: report
 pagination_dir: page
 theme: minimal
 
@@ -52,3 +65,13 @@ menu:
 # lowercase heading ids, so links like #program resolve
 marked:
   modifyAnchors: 1
+
+# old addresses (from the WordPress site) that forward to their new location
+redirects:
+  /TR/timecode-in-imf/: https://github.com/imfug/001-timecode-in-imf
+  /TR/pkg-and-delivery/: https://github.com/imfug/002-pkg-and-delivery
+  /TR/imsc-authoring/: https://github.com/imfug/003-imsc-authoring
+  /TR/audio-track-files/: https://github.com/imfug/004-audio-track-files
+  /documents/ams-2019-workshop-outcome/: /assets/2019/11/digital-preservation-with-imf-v1.pdf
+  /home/: /
+  /category/uncategorized/: /archives/

@@ -28,14 +28,8 @@ const privSlugs = new Set(
   items.filter((i) => ['post', 'page'].includes(i['wp:post_type']) && i['wp:status'] === 'private')
     .map((i) => i['wp:post_name']),
 );
-// paths the live site redirected to documents (inferred from the file names)
-const REDIRECTS = {
-  '/TR/timecode-in-imf/': '/assets/2020/11/imfug-001-bp-timecode-in-imf.pdf',
-  '/TR/pkg-and-delivery/': '/assets/2020/11/imfug-002-bp-pkg-and-delivery.pdf',
-  '/TR/imsc-authoring/': '/assets/2021/03/imfug-003-bp-imsc-authoring-2021-02-04.pdf',
-  '/TR/audio-track-files/': '/assets/2020/11/imfug-004-bp-audio-track-files-2020-11-10.pdf',
-  '/documents/ams-2019-workshop-outcome/': '/assets/2019/11/digital-preservation-with-imf-v1.pdf',
-};
+// paths the live site redirected to documents: kept in _config.yml, where scripts/legacy-urls.js also publishes them
+const REDIRECTS = yaml.load(fs.readFileSync(new URL('../_config.yml', import.meta.url), 'utf8')).redirects || {};
 
 // featured images ("banners"): post id -> attachment URL
 const attachments = new Map(
