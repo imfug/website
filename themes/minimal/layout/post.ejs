@@ -2,5 +2,6 @@
   <h1><%= page.title %></h1>
   <time class="small text-body-secondary" datetime="<%= date_xml(page.date) %>"><%= date(page.date, 'YYYY-MM-DD') %></time>
   <% if (page.banner) { %><img class="img-fluid rounded mt-3" src="<%- url_for(page.banner) %>" alt=""><% } %>
+  <%- partial('_partial/toc') %>
   <div class="content mt-3"><%- page.content %></div>
 </article>

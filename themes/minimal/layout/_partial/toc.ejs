@@ -1,0 +1,6 @@
+<% if (page.toc) { const items = toc(page.content, { min_depth: 2, max_depth: 3, list_number: false, class: 'toc' }); if (items) { %>
+<nav class="toc-box border rounded px-3 py-2 mt-3" aria-label="Contents" data-pagefind-ignore>
+  <div class="fw-semibold small text-body-secondary mb-1">Contents</div>
+  <%- items %>
+</nav>
+<% } } %>

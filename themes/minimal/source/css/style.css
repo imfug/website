@@ -13,3 +13,15 @@
   --pagefind-ui-border: var(--bs-border-color);
   --pagefind-ui-tag: var(--bs-tertiary-bg);
 }
+
+/* Slightly smaller h2 in page content (Bootstrap default is 2rem) */
+.content h2 { font-size: calc(1.3rem + .6vw); }
+@media (min-width: 1200px) {
+  .content h2 { font-size: 1.75rem; }
+}
+
+/* Page contents list (front matter: toc: true) */
+.toc-box ol { list-style: none; margin: 0; padding-left: 0; }
+.toc-box ol ol { padding-left: 1rem; }
+.toc-box li { margin: .15rem 0; }
+.toc-box a { text-decoration: none; }
