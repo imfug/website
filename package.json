@@ -5,9 +5,7 @@
     "build": "hexo clean && hexo generate && pagefind --site public",
     "server": "hexo server",
     "clean": "hexo clean",
-    "convert": "node tools/wxr2hexo.mjs build/imfug.WordPress.2026-10-21.xml build/uploads/uploads source",
-    "check-links": "node tools/check-links.mjs",
-    "check-urls": "node tools/check-urls.mjs"
+    "check-links": "node tools/check-links.mjs"
   },
   "description": "",
   "dependencies": {
@@ -23,12 +21,8 @@
   },
   "devDependencies": {
     "cheerio": "^1.2.0",
-    "fast-xml-parser": "^5.11.2",
     "js-yaml": "^4.3.2",
-    "linkinator": "^7.6.1",
-    "pagefind": "^1.5.2",
-    "turndown": "^7.2.4",
-    "turndown-plugin-gfm": "^1.0.2"
+    "pagefind": "^1.5.2"
   },
   "private": true,
   "hexo": {
