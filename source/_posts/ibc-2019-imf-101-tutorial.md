@@ -39,4 +39,4 @@ No registration necessary. The session is free to all IBC attendees.
 
 ## Contact
 
-[info@imfug.com](mailto:archive@imfug.com)
+[info@imfug.com](mailto:info@imfug.com)

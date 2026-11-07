@@ -17,6 +17,6 @@ When: September 13 in Amsterdam, NL Program chair: Siegfried Foessel <[siegfrie
 
 When: October 25 in Los Angeles, CA, USA Program chair: Florian Schleich <[fschleich@netflix.com](mailto:fschleich@netflix.com)\> Event page: [Workshop on preserving and re-purposing studio productions using IMF](/events/2019-10-workshop-on-preserving-and-re-purposing-studio-productions-using-imf/)
 
-**_Submit your presentation proposals by July 1 at [archive@imfug.com](mailto:archive@imfug.com)_**
+**_Submit your presentation proposals by July 1 at [info@imfug.com](mailto:info@imfug.com)_**
 
 Submissions from archives, content producers/owners, product manufacturers and movie professionals are welcome. All submissions should include a short abstract (3-4 sentences) and specify the target event (Amsterdam and/or Los Angeles). Presentations should have a maximum duration of 15 minutes and should focus on archival and preservation use cases and workflows. These workshops are a unique opportunity to meet experts and implementers, and share ideas, use cases, and requirements. Admission will be open to all, with tickets available starting August 1, 2019.

@@ -31,7 +31,7 @@ Siegfried Foessel
 
 ## Contact
 
-[archive@imfug.com](mailto:archive@imfug.com)
+[info@imfug.com](mailto:info@imfug.com)
 
 ## Program
 

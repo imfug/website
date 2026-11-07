@@ -40,7 +40,7 @@
       <div class="main">
         <main><%- body %></main>
         <footer>
-          <%= config.description %> · <a href="<%- url_for('atom.xml') %>">Feed</a>
+          © <%= new Date().getFullYear() %> <%= config.author %> · Questions? <a href="mailto:info@imfug.com">info@imfug.com</a> · <a href="<%- url_for('atom.xml') %>">Feed</a>
         </footer>
       </div>
   </div>
