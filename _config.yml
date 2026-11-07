@@ -44,7 +44,22 @@ feed:
   path: atom.xml
   limit: 20
 
-# A value that is a mapping becomes an expandable group of sub-items (open by default)
+hero:
+  title: Welcome to the IMF User Group!
+  text: |
+    The IMF UG is a member-led forum for users and implementers of the
+    Interoperable Master Format (IMF) standard. It publishes best practices,
+    organizes plugfests, collects requirements and much more. The UG holds
+    regular hybrid meetings, which are open to members and guests.
+
+    Questions? Email [info@imfug.org](mailto:info@imfug.org).
+  buttons:
+    What is IMF?: /explainer/
+    Best practices: best-practices/
+    Videos: https://www.youtube.com/@IMFUserGroup
+    Join the UG: /join/
+
+
 menu:
   About: /about/
   What is IMF?: /explainer/

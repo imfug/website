@@ -1,3 +1,12 @@
+<% if (config.hero && page.current === 1) { var hero = config.hero; %>
+  <section class="hero">
+    <h1><%= hero.title %></h1>
+    <% if (hero.text) { %><div class="lead"><%- markdown(hero.text.replace(/([^\n])\n(?=[^\n])/g, '$1 ')).replace(/(href=")\/(?!\/)/g, '$1' + config.root) %></div><% } %>
+    <% if (hero.buttons) { %><div class="buttons">
+      <% Object.keys(hero.buttons).forEach(function(label, i){ %><a class="button<%= i === 0 ? ' primary' : '' %>" href="<%- url_for(hero.buttons[label]) %>"><%= label %></a><% }) %>
+    </div><% } %>
+  </section>
+<% } %>
 <% page.posts.each(function(post){ %>
   <article class="post-card">
     <header>

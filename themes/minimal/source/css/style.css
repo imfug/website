@@ -133,6 +133,25 @@ summary.menu-link::-webkit-details-marker { display: none; }
   --pagefind-ui-tag: var(--bg-subtle);
 }
 
+/* ---------- Front page hero ---------- */
+.hero {
+  margin-bottom: 2rem; padding: 2rem 1.5rem;
+  border-radius: var(--radius); background-color: var(--bg-subtle);
+  border: 1px solid var(--border-soft);
+}
+.hero h1 { margin-bottom: .75rem; font-weight: 700; }
+.hero .lead { max-width: 40rem; font-size: 1.15rem; color: var(--text-muted); }
+.hero .lead > :last-child { margin-bottom: 0; }
+.buttons { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.25rem; }
+.button {
+  display: inline-block; padding: .5rem 1rem; border-radius: var(--radius);
+  border: 1px solid var(--accent); color: var(--link); text-decoration: none; font-weight: 500;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out;
+}
+.button:hover { color: var(--on-accent); background-color: var(--accent); }
+.button.primary { color: var(--on-accent); background-color: var(--accent); }
+.button.primary:hover { background-color: var(--link-hover); border-color: var(--link-hover); }
+
 /* ---------- Posts and lists ---------- */
 .meta { font-size: .875em; color: var(--text-muted); }
 .banner { display: block; margin-top: 1rem; border-radius: var(--radius); }
