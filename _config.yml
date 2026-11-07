@@ -5,7 +5,6 @@ language: en
 timezone: America/Los_Angeles
 
 url: https://www.imfug.com/
-root: /website/
 permalink: :title/
 pretty_urls:
   trailing_index: false
