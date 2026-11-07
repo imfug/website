@@ -14,6 +14,7 @@
         <a class="brand" href="<%- url_for('/') %>"><img src="<%- url_for('images/logo.png') %>" alt="<%= config.title %>"></a>
         <a class="site-title" href="<%- url_for('/') %>"><%= config.title %></a>
         <% if (config.description) { %><p class="tagline"><%= config.description %></p><% } %>
+        <%- partial('_partial/social') %>
         <nav class="menu">
           <%
             var isCurrent = function(u){ return typeof u === 'string' && u.charAt(0) === '/' && is_current(u); };

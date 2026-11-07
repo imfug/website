@@ -55,6 +55,12 @@ hero:
     Join the UG: /join/
 
 
+# icons under the sidebar description (supported: youtube, linkedin, email)
+social:
+  youtube: https://www.youtube.com/@IMFUserGroup
+  linkedin: https://www.linkedin.com/company/imfug
+  email: mailto:info@imfug.com
+
 menu:
   About: /about/
   What is IMF?: /explainer/

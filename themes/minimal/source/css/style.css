@@ -108,6 +108,11 @@ footer {
 .site-title:hover { color: var(--text); }
 .tagline { margin: .25rem 0 1rem; font-size: .875em; color: var(--text-muted); }
 
+.social { display: flex; gap: 1.25rem; margin: -.25rem 0 1rem; }
+.social a { display: block; color: var(--text-muted); transition: color .15s ease-in-out; }
+.social a:hover { color: var(--link); }
+.social svg { display: block; width: 1.5rem; height: 1.5rem; }
+
 .menu { display: flex; flex-wrap: wrap; gap: .25rem; }
 @media (min-width: 768px) {
   .menu { flex-direction: column; }
