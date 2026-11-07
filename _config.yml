@@ -4,7 +4,7 @@ author: IMF UG
 language: en
 timezone: America/Los_Angeles
 
-url: https://imfug.github.io/website
+url: https://www.imfug.com/
 root: /website/
 permalink: :title/
 pretty_urls:
