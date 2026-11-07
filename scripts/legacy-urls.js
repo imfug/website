@@ -47,7 +47,7 @@ hexo.extend.generator.register('legacy-urls', function () {
   return [...files, ...redirects];
 });
 
-// Runs after scripts/content.js has added the site root to every local link
+// Runs after scripts/fix-relative-links.js has added the site root to every local link
 hexo.extend.filter.register('after_post_render', (data) => {
   const root = hexo.config.root || '/';
   const re = new RegExp(`(\\s(?:href|src|data)=")${root.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(assets/[^"]*)`, 'g');

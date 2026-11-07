@@ -1,5 +1,5 @@
 'use strict';
-// Fix up rendered content. Its styling lives in the theme's style.css (.content rules).
+// Add the site root (e.g. /website/ on GitHub Pages) to root-relative links that lack it.
 
 hexo.extend.filter.register('after_post_render', (data) => {
   // Markdown links and images get the site root from the renderer; raw HTML (tables, iframes, <a>) doesn't,

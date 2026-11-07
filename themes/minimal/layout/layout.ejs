@@ -13,7 +13,7 @@
       <aside class="sidebar">
         <a class="brand" href="<%- url_for('/') %>"><img src="<%- url_for('images/logo.png') %>" alt="<%= config.title %>"></a>
         <a class="site-title" href="<%- url_for('/') %>"><%= config.title %></a>
-        <% if (config.tagline) { %><p class="tagline"><%= config.tagline %></p><% } %>
+        <% if (config.description) { %><p class="tagline"><%= config.description %></p><% } %>
         <nav class="menu">
           <%
             var isCurrent = function(u){ return typeof u === 'string' && u.charAt(0) === '/' && is_current(u); };

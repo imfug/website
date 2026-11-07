@@ -1,8 +1,6 @@
 title: IMF UG
-subtitle: ''
-description: A SMPTE community for users and implementers of the Interoperable Master Format (IMF) standards #ispeakimf
+description: A SMPTE community for users and implementers of the Interoperable Master Format (IMF) standards
 author: IMF UG
-tagline: A SMPTE community for users and implementers of the Interoperable Master Format (IMF) standards
 language: en
 timezone: America/Los_Angeles
 
@@ -23,9 +21,6 @@ prismjs:
   enable: false
 
 per_page: 10
-# PDFs under source/assets/ are published at /wp-content/uploads/ instead (scripts/legacy-urls.js)
-exclude:
-  - assets/**/*.pdf
 
 # category pages keep the WordPress addresses (/category/<slug>/)
 category_dir: category
@@ -80,6 +75,10 @@ menu:
 # lowercase heading ids, so links like #program resolve
 marked:
   modifyAnchors: 1
+
+# PDFs under source/assets/ are published at /wp-content/uploads/ instead (scripts/legacy-urls.js)
+exclude:
+  - assets/**/*.pdf
 
 # old addresses (from the WordPress site) that forward to their new location
 redirects:

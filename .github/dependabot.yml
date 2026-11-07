@@ -1,0 +1,19 @@
+# Dependency update PRs; each one is built and link-checked by the Pages workflow
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      # one PR for all minor/patch updates, separate PRs for major versions
+      npm-minor-and-patch:
+        update-types: [minor, patch]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      github-actions:
+        patterns: ["*"]

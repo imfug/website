@@ -1,0 +1,35 @@
+name: Build
+
+# Builds the site and checks its links: on its own for pull requests,
+# and as the first step of deploy.yml (which asks for the Pages artifact)
+on:
+  pull_request:
+  workflow_call:
+    inputs:
+      upload:
+        description: Upload the built site as the GitHub Pages artifact
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Check internal links
+        run: npm run check-links
+      - uses: actions/configure-pages@v5
+        if: inputs.upload
+      - uses: actions/upload-pages-artifact@v3
+        if: inputs.upload
+        with:
+          path: public
