@@ -1,19 +1,26 @@
 <!doctype html>
-<html lang="<%= config.language %>">
+<html lang="<%= config.language %>" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><%= page.title ? page.title + ' · ' : '' %><%= config.title %></title>
   <meta name="description" content="<%= config.description %>">
   <link rel="alternate" type="application/atom+xml" href="<%- url_for('atom.xml') %>">
+  <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
   <%- css('css/style.css') %>
 </head>
 <body>
   <div class="site">
       <aside class="sidebar">
-        <a class="brand" href="<%- url_for('/') %>"><img src="<%- url_for('images/logo.png') %>" alt="<%= config.title %>"></a>
-        <a class="site-title" href="<%- url_for('/') %>"><%= config.title %></a>
+        <div class="sidebar-head">
+          <a class="brand" href="<%- url_for('/') %>"><img src="<%- url_for('images/logo.png') %>" alt="<%= config.title %>"></a>
+          <a class="site-title" href="<%- url_for('/') %>"><%= config.title %></a>
+          <button class="nav-toggle" type="button" aria-controls="sidebar-nav" aria-expanded="false" aria-label="Menu">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
         <% if (config.description) { %><p class="tagline"><%= config.description %></p><% } %>
+        <div class="sidebar-nav" id="sidebar-nav">
         <%- partial('_partial/social') %>
         <nav class="menu">
           <%
@@ -26,8 +33,8 @@
           <% Object.keys(config.menu || {}).forEach(function(k){ var v = config.menu[k]; %>
             <% if (typeof v === 'string') { %>
               <%- link(k, v) %>
-            <% } else { var kids = Object.keys(v); %>
-              <details open>
+            <% } else { var kids = Object.keys(v); var hasCurrent = kids.some(function(c){ return isCurrent(v[c]); }); %>
+              <details<%= hasCurrent ? ' open' : '' %>>
                 <summary class="menu-link"><%= k %> <span class="caret">▾</span></summary>
                 <div class="submenu">
                   <% kids.forEach(function(c){ %><%- link(c, v[c]) %><% }) %>
@@ -36,6 +43,7 @@
             <% } %>
           <% }) %>
         </nav>
+        </div>
         <div id="search"></div>
       </aside>
       <div class="main">
@@ -45,6 +53,17 @@
         </footer>
       </div>
   </div>
+  <script>
+    // Narrow screens: the toggle button shows/hides the sidebar navigation
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('sidebar-nav');
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
   <script>
     // Pagefind's index is built after `hexo generate` (npm run build), so it is absent under `hexo server`
     (function () {

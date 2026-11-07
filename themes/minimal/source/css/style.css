@@ -95,9 +95,6 @@ footer {
 /* ---------- Sidebar ---------- */
 .brand { display: block; margin-bottom: .5rem; }
 .brand img { display: block; width: 10rem; }
-@media (max-width: 767.98px) {
-  .brand img { width: 8rem; }
-}
 .site-title {
   display: block; font-size: calc(1.325rem + .9vw); font-weight: 700;
   color: var(--text); text-decoration: none;
@@ -106,6 +103,13 @@ footer {
   .site-title { font-size: 2rem; }
 }
 .site-title:hover { color: var(--text); }
+
+.nav-toggle {
+  display: none; padding: .375rem; flex: none;
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: none; color: var(--text); cursor: pointer;
+}
+.nav-toggle svg { display: block; width: 1.5rem; height: 1.5rem; }
 .tagline { margin: .25rem 0 1rem; font-size: .875em; color: var(--text-muted); }
 
 .social { display: flex; gap: 1.25rem; margin: -.25rem 0 1rem; }
@@ -126,7 +130,8 @@ footer {
 .menu-link.active, .menu-link.active:hover { color: var(--on-accent); background-color: var(--accent); }
 summary.menu-link { cursor: pointer; list-style: none; }
 summary.menu-link::-webkit-details-marker { display: none; }
-.caret { font-size: .875em; }
+.caret { display: inline-block; font-size: .875em; transition: transform .15s ease-in-out; }
+details:not([open]) > summary .caret { transform: rotate(-90deg); }
 #search { margin-top: 1rem; }
 
 /* Pagefind search uses the site colours */
@@ -136,6 +141,37 @@ summary.menu-link::-webkit-details-marker { display: none; }
   --pagefind-ui-background: var(--bg);
   --pagefind-ui-border: var(--border);
   --pagefind-ui-tag: var(--bg-subtle);
+}
+
+/* Narrow screens: logo, title, search and menu button share one row, the tagline sits below,
+   and the social links and menu collapse behind the button */
+@media (max-width: 767.98px) {
+  .sidebar {
+    display: flex; flex-wrap: wrap; align-items: center; column-gap: .75rem;
+    border-right: 0; border-bottom: 1px solid var(--border);
+  }
+  .sidebar-head { display: contents; }
+  .brand { order: 1; margin-bottom: 0; flex: none; }
+  .brand img { width: 3rem; }
+  .site-title { order: 2; font-size: 1.25rem; }
+  #search { order: 3; flex: 1; min-width: 0; margin-top: 0; }
+  .nav-toggle { order: 4; }
+  .tagline { order: 5; flex-basis: 100%; margin: .75rem 0 0; }
+  .sidebar-nav { order: 6; flex-basis: 100%; padding-top: 1rem; }
+  .sidebar-nav .social { margin-top: 0; }
+  .sidebar-nav .menu { flex-direction: column; }
+  .js .nav-toggle { display: block; }
+  .js .sidebar-nav:not(.open) { display: none; }
+
+  /* Compact search box whose results drop down across the full width of the page */
+  .pagefind-ui { --pagefind-ui-scale: .75; }
+  #search .pagefind-ui__drawer {
+    position: absolute; z-index: 10; top: calc(100% + .5rem);
+    right: calc(-3rem - 2px); width: calc(100vw - 2rem);
+    max-height: 70vh; overflow-y: auto; padding: 0 1rem 1rem;
+    background-color: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+  }
 }
 
 /* ---------- Front page hero ---------- */
