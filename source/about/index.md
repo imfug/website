@@ -22,6 +22,15 @@ To fulfill its objective, the UG:
 
 The IMF UG is organized under the umbrella of the [SMPTE](https://www.smpte.org/).
 
+## House rules
+
+*No public disclosure*: No press and members are prohibited from speaking to the press or making any public disclosure about the meetings or any side discussions related to the IMF User Group.
+
+*No recording*: Recording of the meetings is prohibited by all members (except for the Secretary for the express purpose of capturing minutes, after which such recording will be destroyed).
+
+*Anti-Trust*: Members are prohibited from discussing items of market and business commerce that could be considered as anti-trust behavior, including, but not limited to, pricing, sales terms, territories, production levels, market supply, or other areas of competition.
+
+
 ## Sponsoring members
 
 _We thank our sponsoring members for their continued financial support._

@@ -28,4 +28,5 @@ Plugfests are typically in-person, with remote participation through instant mes
 
 ## Who?
 
-Plugfests are open to UG members and guests. Discussions that occur during the plugfest are subject to [UG confidentiality rules](/join/).
+Plugfests are open to UG members and guests. Discussions that occur during the
+plugfest are subject to [UG non-disclosure rules](/about/#house-rules).
