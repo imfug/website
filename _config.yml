@@ -79,6 +79,7 @@ menu:
 
 # lowercase heading ids, so links like #program resolve
 marked:
+  breaks: false
   modifyAnchors: 1
 
 # PDFs under source/assets/ are published at /wp-content/uploads/ instead (scripts/legacy-urls.js)
