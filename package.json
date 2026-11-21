@@ -22,7 +22,7 @@
   "devDependencies": {
     "cheerio": "^1.2.0",
     "js-yaml": "^4.3.2",
-    "pagefind": "^1.5.2"
+    "pagefind": "^1.6.0"
   },
   "private": true,
   "hexo": {
